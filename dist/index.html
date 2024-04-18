@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <h1>Weather Information</h1>
+    <form id="weatherForm">
+      <input
+        type="text"
+        id="locationInput"
+        placeholder="Enter location"
+        required />
+      <button type="submit">Get Weather</button>
+    </form>
+    <p>Or use your current location:</p>
+    <button id="useLocation">Use Current Location</button>
+    <button id="toggleTemp">Toggle °C/°F</button>
+    <div id="loading" style="display: none">Loading...</div>
+    <div id="weatherDisplay">
+      <!-- Weather data will be displayed here -->
+    </div>
+    <footer>
+      &copy; 2024 by ProsperJohn9
+      <a href="https://github.com/prosperjohn9"
+        ><img src="./github.svg" alt="github" /></a
+      >. All rights reserved.
+    </footer>
+  </body>
+</html>

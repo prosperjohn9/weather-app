@@ -1,0 +1,33 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather App",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "server": "node server.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/prosperjohn9/weather-app.git"
+  },
+  "author": "ProsperJohn9",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prosperjohn9/weather-app/issues"
+  },
+  "homepage": "https://github.com/prosperjohn9/weather-app/dist/index.html",
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
