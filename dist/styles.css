@@ -1,0 +1,19 @@
+#loading {
+  display: none; /* Hidden by default */
+  font-size: 20px;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.25rem;
+}

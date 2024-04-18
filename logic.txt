@@ -1,0 +1,36 @@
+Step 1:
+Design Your Application
+HTML and CSS:
+Create a basic HTML template that includes placeholders for weather data.
+Design CSS that allows dynamic changes (background, colors) depending on the weather data.
+JavaScript Architecture:
+Use ES6 modules to manage different components of your application (e.g., UI handling, data fetching, utility functions).
+
+Step 2: Fetching Weather Data
+API Integration:
+Choose a weather API (WeatherAPI).
+Register and obtain an API key.
+Async Data Fetching:
+Create a function using fetch wrapped in a promise or an async function to retrieve weather data based on user input.
+Handle errors and edge cases (e.g., no data for a location).
+
+Step 3: Displaying Weather Data
+Render Function:
+Write a function to update the DOM with new weather data.
+Convert temperature between Fahrenheit and Celsius as per user toggle.
+Dynamic UI Changes:
+Change the background color or add images that reflect the current weather.
+
+Step 4: Implementing User Interactions
+Search and Toggle Functionality:
+Implement a search box for users to enter the location.
+Add a toggle switch to choose between Fahrenheit and Celsius.
+Event Listeners:
+Add event listeners for the search input and toggle switch to trigger data fetching and UI updates.
+
+Step 5: Utilizing Promises and Async/Await
+Promises in Action:
+Use promises for handling asynchronous API requests smoothly.
+Chain promises where necessary to handle sequential asynchronous operations.
+Async/Await for Cleaner Code:
+Use async/await in functions to simplify handling asynchronous data flow.
