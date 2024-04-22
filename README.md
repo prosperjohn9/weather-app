@@ -9,7 +9,7 @@ Desktop View:
 
 Mobile View:
 
-![Mobile View](./dist/mobile.jpg)
+![Mobile View](./dist/mobile.png)
 
 ## Description
 
