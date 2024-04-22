@@ -8,21 +8,23 @@
     <title>Weather App</title>
   </head>
   <body>
-    <h1>Weather Information</h1>
-    <form id="weatherForm">
-      <input
-        type="text"
-        id="locationInput"
-        placeholder="Enter location"
-        required />
-      <button type="submit">Get Weather</button>
-    </form>
-    <p>Or use your current location:</p>
-    <button id="useLocation">Use Current Location</button>
-    <button id="toggleTemp">Toggle °C/°F</button>
-    <div id="loading" style="display: none">Loading...</div>
-    <div id="weatherDisplay">
-      <!-- Weather data will be displayed here -->
+    <div class="weather-app">
+      <h1>Weather Information</h1>
+      <form id="weatherForm">
+        <input
+          type="text"
+          id="locationInput"
+          placeholder="Enter location"
+          required />
+        <button type="submit">Get Weather</button>
+      </form>
+      <p>Or use your current location:</p>
+      <button id="useLocation">Use Current Location</button>
+      <button id="toggleTemp">Toggle °C/°F</button>
+      <div id="loading" style="display: none">Loading...</div>
+      <div id="weatherDisplay">
+        <!-- Weather data will be displayed here -->
+      </div>
     </div>
     <footer>
       &copy; 2024 by ProsperJohn9
