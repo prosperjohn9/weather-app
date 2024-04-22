@@ -1,10 +1,9 @@
 Step 1:
-Design Your Application
+Design the Application
 HTML and CSS:
 Create a basic HTML template that includes placeholders for weather data.
-Design CSS that allows dynamic changes (background, colors) depending on the weather data.
 JavaScript Architecture:
-Use ES6 modules to manage different components of your application (e.g., UI handling, data fetching, utility functions).
+Use ES6 modules to manage different components of the application.
 
 Step 2: Fetching Weather Data
 API Integration:
