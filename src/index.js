@@ -113,7 +113,6 @@ function displayWeatherData(data) {
         <div class="weatherDetail"><strong>Max Temp:</strong> ${maxTemp} ${tempUnit}</div>
         <div class="weatherDetail"><strong>Min Temp:</strong> ${minTemp} ${tempUnit}</div>
         <div class="weatherDetail"><strong>Chance of Rain:</strong> ${data.forecast.forecastday[0].day.daily_chance_of_rain}%</div>
-        <div class="weatherDetail"><strong>Chance of Snow:</strong> ${data.forecast.forecastday[0].day.daily_chance_of_snow}%</div>
         <div class="weatherDetail"><strong>Sunrise:</strong> ${data.forecast.forecastday[0].astro.sunrise}</div>
         <div class="weatherDetail"><strong>Sunset:</strong> ${data.forecast.forecastday[0].astro.sunset}</div>
     `;
