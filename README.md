@@ -20,7 +20,7 @@ This project was created for the [Weather App](https://www.theodinproject.com/le
 - Display current weather conditions, with a description and an icon
 - Show temperature (toggle between °C and °F), humidity, and wind speed
 - Show today's high and low, chance of rain, sunrise, and sunset
-- Search for weather information by location
+- Search for weather information by place name, or by coordinates such as `6.25, 6.19`
 - Use your current location, with the name of the place you are in
 - Loading indicator while data is fetched
 - Responsive design for mobile and desktop

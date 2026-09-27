@@ -1,4 +1,5 @@
 import { describeWeather } from './weatherCodes.mjs';
+import { parseCoordinates, roundCoordinate } from './coordinates.mjs';
 
 // Open-Meteo (weather and place search) and OpenStreetMap's Nominatim (place
 // names for coordinates) are free and need no API key or sign-up, so the app
@@ -22,7 +23,16 @@ document
       return; // Ignore a search that is only spaces.
     }
     displayLoading(true); // Show the loading indicator.
-    fetchWeatherData(location); // Fetch weather data for the entered location.
+    const coords = parseCoordinates(location); // e.g. "6.25, 6.19"
+    if (coords) {
+      // Look up coordinates the same way as the "Use Current Location" button.
+      fetchWeatherDataByCoords(
+        roundCoordinate(coords.lat),
+        roundCoordinate(coords.lon)
+      );
+    } else {
+      fetchWeatherData(location); // Fetch weather data for the entered location.
+    }
   });
 
 // Add an event listener to the "Use Current Location" button.
@@ -31,11 +41,10 @@ document.getElementById('useLocation').addEventListener('click', function () {
     displayLoading(true); // Show the loading indicator.
     navigator.geolocation.getCurrentPosition(
       function (position) {
-        // Success callback: Extract latitude and longitude from the position object.
-        // Round to 3 decimals (about 110 m): enough for the weather and the
-        // town name, without sending the exact position to third parties.
-        const lat = Math.round(position.coords.latitude * 1000) / 1000;
-        const lon = Math.round(position.coords.longitude * 1000) / 1000;
+        // Success callback: Extract latitude and longitude from the position
+        // object, rounded to about 110 m before they are sent anywhere.
+        const lat = roundCoordinate(position.coords.latitude);
+        const lon = roundCoordinate(position.coords.longitude);
         fetchWeatherDataByCoords(lat, lon); // Fetch weather data using the coordinates.
       },
       function (error) {
@@ -151,7 +160,7 @@ async function fetchPlaceName(lat, lon) {
     return placeNameCache.get(cacheKey);
   }
   const fallback = {
-    name: `Your location (${lat.toFixed(2)}, ${lon.toFixed(2)})`,
+    name: `${lat.toFixed(2)}, ${lon.toFixed(2)}`,
   };
   try {
     const params = new URLSearchParams({
@@ -179,7 +188,9 @@ async function fetchPlaceName(lat, lon) {
         address.county ||
         data.name ||
         fallback.name,
-      region: address.state,
+      // "Delta State" -> "Delta", matching Open-Meteo's search results and
+      // most weather services.
+      region: address.state?.replace(/ State$/, ''),
       country: address.country,
     };
     placeNameCache.set(cacheKey, place);
