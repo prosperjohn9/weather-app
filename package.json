@@ -21,9 +21,9 @@
   },
   "homepage": "https://prosperjohn9.github.io/weather-app/dist/",
   "devDependencies": {
-    "webpack": "^5.91.0",
+    "webpack": "^5.111.1",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4",
+    "webpack-dev-server": "^6.0.0",
     "webpack-merge": "^5.10.0"
   }
 }
