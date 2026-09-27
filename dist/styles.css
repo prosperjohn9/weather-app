@@ -49,6 +49,12 @@ button:hover {
   background-color: red;
 }
 
+button:disabled {
+  background-color: skyblue;
+  opacity: 0.6;
+  cursor: progress;
+}
+
 #loading {
   display: none;
   font-size: 2.4rem;
@@ -61,13 +67,19 @@ button:hover {
   margin: 0.4rem 0;
 }
 
-.weatherDetail img {
-  width: 8rem;
-  height: 8rem;
+.weatherIcon {
+  font-size: 6rem;
+  line-height: 1;
 }
 
 #weatherDisplay {
   padding: 0.8rem;
+  text-align: left;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  padding: 0 0.8rem;
   text-align: left;
 }
 
